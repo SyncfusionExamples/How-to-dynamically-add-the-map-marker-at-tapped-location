@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:maps="clr-namespace:Syncfusion.SfMaps.XForms;assembly=Syncfusion.SfMaps.XForms"
+             x:Class="MarkerSample.MainPage">
+
+     <maps:SfMaps  x:Name="sfMaps" Tapped="sfMaps_Tapped">
+        <maps:SfMaps.Layers>
+            <maps:ImageryLayer LayerType="OSM" x:Name="layer">
+                <maps:ImageryLayer.MarkerTemplate>
+                    <DataTemplate>
+                        <Image Source="pin.png" Scale="1" Aspect="AspectFit "  HorizontalOptions="StartAndExpand" VerticalOptions="Center"  HeightRequest="15" WidthRequest="23"   />
+                    </DataTemplate>
+                </maps:ImageryLayer.MarkerTemplate>
+            </maps:ImageryLayer>
+        </maps:SfMaps.Layers>
+    </maps:SfMaps>
+
+</ContentPage>
